@@ -8,7 +8,6 @@ const total = document.getElementById('total');
 
 const flashcards = [
     { lao: 'ສະບາຍດີ', english: 'Hello' },
-    { lao: 'ຂອບໃຈ', english: 'Thank you' },
     { lao: 'ເຈົ້າ', english: 'Yes / you' },
     { lao: 'ບໍ່', english: 'No' },
 
