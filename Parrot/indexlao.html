@@ -140,10 +140,10 @@ body{
       padding-left: 60px;
     }
     .language-toggle option[value="en"] {
-      background-image: url('/Parrot/img/Laos.jpg');
+      background-image: url('/Parrot/imgforparrot/Laos.jpg');
     }
     .language-toggle option[value="lo"] {
-      background-image: url('/Parrot/img/Laos.jpg');
+      background-image: url('/Parrot/imgforparrot/Laos.jpg');
     }
     .auth-buttons .btn-login[disabled],
     .auth-buttons .btn-signup[disabled],
@@ -164,7 +164,7 @@ body{
       if (language === 'en') {
         window.location.href = 'index.html';
       } else {
-        flagIcon.src = '/Parrot/img/Laos.jpg';
+        flagIcon.src = '/Parrot/imgforparrot/Laos.jpg';
       }
     }
 
@@ -173,10 +173,10 @@ body{
       const flagIcon = document.getElementById('flag-icon');
       if (window.location.href.includes('indexlao.html')) {
         languageSelect.value = 'lo';
-        flagIcon.src = '/Parrot/img/Laos.jpg';
+        flagIcon.src = '/Parrot/imgforparrot/Laos.jpg';
       } else {
         languageSelect.value = 'en';
-        flagIcon.src = '/Parrot/img/Laos.jpg';
+        flagIcon.src = '/Parrot/imgforparrot/Laos.jpg';
       }
 
       document.getElementById('sidebar-toggle').addEventListener('click', function() {
@@ -223,7 +223,7 @@ body{
     </div>
     <header style="position: relative;">
       <div class="language-toggle">
-        <img id="flag-icon" src="Parrot\img\Laos.jpg" alt="Laos Flag">
+        <img id="flag-icon" src="/Parrot/imgforparrot/Laos.jpg" alt="Laos Flag">
         <select id="language-select" onchange="changeLanguage()">
           <option value="en">English</option>
           <option value="lo">ລາວ</option>
@@ -254,7 +254,7 @@ body{
         </div>
       </div>
       <div class="hero-image">
-        <img src="/Parrot\img\gogo.png"Learn English Illustration">
+        <img src="/Parrot/imgforparrot/gogo.png" alt="English Illustration" >
       </div>
     </section>
 
