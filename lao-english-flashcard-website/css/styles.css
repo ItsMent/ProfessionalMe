@@ -8,7 +8,7 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
     color: #333;
-    background-image: url("/lao-english-flashcard-website/img/doodlebg.jpg");
+    background-image: url("../lao-english-flashcard-website/img/doodlebg.jpg");
     background-size: 50%;
 }
 
