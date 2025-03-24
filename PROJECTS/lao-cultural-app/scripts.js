@@ -6,68 +6,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const illustrations = [
     {
-      src: 'images/Laos Boun-Pee-Mhai.webp',
+      src: './images/Laos Boun-Pee-Mhai.webp',
       description: 'Laos Boun-Pee-Mhai'
     },
     {
-      src: 'images/Laos Culture.jpg',
+      src: './images/Laos Culture.jpg',
       description: 'Laos Culture'
     },
     {
-      src: 'images/Laos Diversity (1).webp',
+      src: './images/Laos Diversity (1).webp',
       description: 'Laos Diversity'
     },
     {
-      src: 'images/Laos Diversity.jpg',
+      src: './images/Laos Diversity.jpg',
       description: 'Laos Diversity'
     },
     {
-      src: 'images/laos Monument.avif',
+      src: './images/laos Monument.avif',
       description: 'Laos Monument'
     },
     {
-      src: 'images/Laos Wedding.jpg',
+      src: './images/Laos Wedding.jpg',
       description: 'Laos Wedding'
     },
     {
-      src: 'images/Laos Wedding (1).jpg',
+      src: './images/Laos Wedding (1).jpg',
       description: 'Laos Wedding'
     },
     {
-      src: 'images/Luangprabang Temple.jpg',
+      src: './images/Luangprabang Temple.jpg',
       description: 'Luangprabang Temple'
     },
     {
-      src: 'images/VangVieng.jpg',
+      src: './images/VangVieng.jpg',
       description: 'VangVieng'
     },
     {
-      src: 'images/Nam-Tok-Tak.jpg',
+      src: './images/Nam-Tok-Tak.jpg',
       description: 'Nam Tok Tak'
     },
     
     {
-      src: 'images/OIP (1).jpg',
+      src: './images/OIP (1).jpg',
       description: 'OIP (1)'
     },
     {
-      src: 'images/OIP.jpg',
+      src: './images/OIP.jpg',
       description: 'OIP'
     },
     {
-      src: 'images/R (1).jpg',
+      src: './images/R (1).jpg',
       description: 'R (1)'
     },
     {
-      src: 'images/R.jpg',
+      src: './images/R.jpg',
       description: 'R'
     },
     {
-      src: 'images/d3fccee365f44ca19924176d462ecf36.jpg',
+      src: './images/d3fccee365f44ca19924176d462ecf36.jpg',
       description: 'd3fccee365f44ca19924176d462ecf36'
     },
     {
-      src: 'images/39267c8cf68b1ecc954f85a1e52c24d2.jpg',
+      src: './images/39267c8cf68b1ecc954f85a1e52c24d2.jpg',
       description: '39267c8cf68b1ecc954f85a1e52c24d2'
     },
     // Add more illustrations as needed
