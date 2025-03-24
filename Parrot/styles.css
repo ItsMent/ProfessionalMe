@@ -1,0 +1,391 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f4f5f0;
+  }
+  
+  .index-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  header .logo img {
+    width: 100px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  header nav ul li a:hover {
+    color: #58cc02;
+  }
+  
+  header .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  header .auth-buttons .btn-login,
+  header .auth-buttons .btn-signup {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header .auth-buttons .btn-login {
+    background: transparent;
+    color: #333;
+    border: 2px solid #58cc02;
+  }
+  
+  header .auth-buttons .btn-login:hover {
+    background: #58cc02;
+    color: white;
+  }
+  
+  header .auth-buttons .btn-signup {
+    background: #58cc02;
+    color: white;
+    border: 2px solid #58cc02;
+  }
+  
+  header .auth-buttons .btn-signup:hover {
+    background: #4bb001;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero-buttons .btn-primary {
+    background: #58cc02;
+    color: white;
+  }
+  
+  .hero-buttons .btn-primary:hover {
+    background: #4bb001;
+  }
+  
+  .hero-buttons .btn-secondary {
+    background: transparent;
+    color: #58cc02;
+    border: 2px solid #58cc02;
+  }
+  
+  .hero-buttons .btn-secondary:hover {
+    background: #58cc02;
+    color: white;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+  }
+  
+  .feature-card i {
+    font-size: 2rem;
+    color: #58cc02;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    color: #666;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact form input:focus,
+  .contact form textarea:focus {
+    border-color: #58cc02;
+  }
+  
+  .contact form button {
+    padding: 12px 24px;
+    background: #58cc02;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact form button:hover {
+    background: #4bb001;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 50px;
+  }
+  
+  footer p {
+    color: #666;
+  }
+  
+  footer .social-links {
+    margin-top: 10px;
+  }
+  
+  footer .social-links a {
+    color: #58cc02;
+    margin: 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  footer .social-links a:hover {
+    color: #4bb001;
+  }
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f0f2f5;
+    animation: fadeIn 1s ease-in;
+}
+
+.index-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    animation: slideIn 1s ease-in;
+}
+
+header .logo img {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: rotate(10deg);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #58cc02;
+    animation: buttonPulse 0.5s ease-in-out;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: slideIn 1.2s ease-in;
+}
+
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-secondary:hover {
+    animation: buttonPulse 0.5s ease-in-out;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Form */
+.contact form input,
+.contact form textarea {
+    transition: border-color 0.3s ease;
+}
+
+.contact form button:hover {
+    animation: buttonPulse 0.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 50px;
+    animation: fadeIn 1s ease-in;
+}

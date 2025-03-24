@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ນົກແກ້ວ - ພວກເຮົາຈະບໍ່ເຮັດໃຫ້ທ່ານຜິດຫວັງໃນການຮຽນ!!</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+Lao:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="x-icon" href="/Parrot/img/LaoBridge Favicon-01.png">
+  <link href="https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold" rel="stylesheet">
+  <style>
+
+  
+    button{
+        font-family: 'Noto Sans Lao';
+    }
+    form input  {
+    font-family: 'Noto Sans Lao';
+
+  }
+  form textarea  {
+    font-family: 'Noto Sans Lao';
+
+  }
+
+footer p {
+    font-family: "Feather Bold";
+}
+
+.footer-text {
+  font-family: "Feather Bold";
+  font-size: 14px;
+  color: #333;
+}
+body{
+    font-family:"Noto Sans Lao";
+    font-size: large;
+}
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.language-toggle img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+#language-select {
+
+    font-family: 'Noto Sans Lao';
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #65ca3a;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#language-select:hover {
+  background-color: #579757;
+}
+.hero-image img {
+      animation: bounceIn 1.5s ease, wiggle 2s ease-in-out infinite;
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+      
+    }
+    @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #b3d295b8;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+      transform: translateX(-100%);
+    }
+    .sidebar.active {
+      transform: translateX(0);
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+    .sidebar ul.bottom {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+    }
+    .sidebar-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .sidebar-toggle.hidden {
+      display: none;
+    }
+    .language-toggle select {
+      
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: 5px center, 35px center;
+      padding-left: 60px;
+    }
+    .language-toggle option[value="en"] {
+      background-image: url('/Parrot/img/Laos.jpg');
+    }
+    .language-toggle option[value="lo"] {
+      background-image: url('/Parrot/img/Laos.jpg');
+    }
+    .auth-buttons .btn-login[disabled],
+    .auth-buttons .btn-signup[disabled],
+    .hero-buttons .btn-primary[disabled],
+    .hero-buttons .btn-secondary[disabled] {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .social-links a.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  </style>
+  <script>
+    function changeLanguage() {
+      const language = document.getElementById('language-select').value;
+      const flagIcon = document.getElementById('flag-icon');
+      if (language === 'en') {
+        window.location.href = 'index.html';
+      } else {
+        flagIcon.src = '/Parrot/img/Laos.jpg';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageSelect = document.getElementById('language-select');
+      const flagIcon = document.getElementById('flag-icon');
+      if (window.location.href.includes('indexlao.html')) {
+        languageSelect.value = 'lo';
+        flagIcon.src = '/Parrot/img/Laos.jpg';
+      } else {
+        languageSelect.value = 'en';
+        flagIcon.src = '/Parrot/img/Laos.jpg';
+      }
+
+      document.getElementById('sidebar-toggle').addEventListener('click', function() {
+        document.getElementById('sidebar').classList.toggle('active');
+        document.getElementById('sidebar-toggle').classList.toggle('hidden');
+      });
+
+      document.getElementById('index-container').addEventListener('click', function(event) {
+        if (!document.getElementById('sidebar').contains(event.target) && !document.getElementById('sidebar-toggle').contains(event.target)) {
+          document.getElementById('sidebar').classList.remove('active');
+          document.getElementById('sidebar-toggle').classList.remove('hidden');
+        }
+      });
+    });
+
+    function previewProfilePicture(event) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        const output = document.getElementById('profile-pic');
+        output.src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</head>
+<body>
+  <div class="index-container" id="index-container">
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="#Home"><i class="fas fa-home"></i> ໜ້າຫຼັກ</a></li>
+        <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> ແຜງຄວບຄຸມ</a></li>
+        <li><a href="#profile"><i class="fas fa-user"></i> ໂປຣໄຟລ໌</a></li>
+        <li><a href="#Quizzes"><i class="fas fa-question-circle"></i> ແບບທົດສອບ</a></li>
+        <li><a href="#settings"><i class="fas fa-cog"></i> ການຕັ້ງຄ່າ</a></li>
+        <li><a href="#ai"><i class="fas fa-robot"></i> AI</a></li>
+      </ul>
+      <ul class="bottom">
+        <li><a href="#Support"><i class="fas fa-life-ring"></i> ສະໜັບສະໜູນ</a></li>
+        <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> ອອກຈາກລະບົບ</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-toggle" id="sidebar-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <header style="position: relative;">
+      <div class="language-toggle">
+        <img id="flag-icon" src="/img/flags/la.png" alt="Laos Flag">
+        <select id="language-select" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="lo">ລາວ</option>
+        </select>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="#features">ຄຸນສົມບັດ</a></li>
+          <li><a href="#about">ກ່ຽວກັບ</a></li>
+          <li><a href="#contact">ຕິດຕໍ່</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn-login" disabled>ເຂົ້າສູ່ລະບົບ</a>
+        <a href="registration.html" class="btn-signup" disabled>ລົງທະບຽນ</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>ຮຽນພາສາອັງກິດແບບມ່ວນໆ!</h1>
+        <p>ເຂົ້າ​ຮ່ວມ​ກັບ​ຜູ້​ຮຽນ​ຫຼາຍ​ລ້ານ​ຄົນ​ໃນ​ທົ່ວ​ໂລກ​ແລະ​ເລີ່ມ​ຕົ້ນ​ການ​ເດີນ​ທາງ​ຂອງ​ທ່ານ​ເພື່ອ​ຄວາມ​ຄ່ອງ​ແຄ້ວ​ໃນ​ມື້​ນີ້​.</p>
+        <div class="hero-buttons">
+          <a href="/ProficiencyOfEnglsih/proficiencyInLao.html" class="btn-primary" disabled>ເລີ່ມຮຽນ!!</a>
+          <a href="#features" class="btn-secondary" disabled>ສຶກສາເພີ່ມເຕີມ</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/Parrot/img/LaoBridge Favicon-01.png"Learn English Illustration">
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <h2>ເປັນຫຍັງຕ້ອງເລືອກພວກເຮົາ?</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <i class="fas fa-book-open"></i>
+          <h3>ບົດຮຽນແບບໂຕ້ຕອບ</h3>
+          <p>ບົດຮຽນທີ່ມີສ່ວນຮ່ວມທີ່ອອກແບບມາເພື່ອເຮັດໃຫ້ການຮຽນຮູ້ມ່ວນ ແລະມີປະສິດທິພາບ.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-microphone-alt"></i>
+          <h3>ການປະຕິບັດການເວົ້າ</h3>
+          <p>ຝຶກເວົ້າກັບສະຖານະການໃນຊີວິດຈິງ ແລະຄໍາຕິຊົມທັນທີ.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-trophy"></i>
+          <h3>ຕິດຕາມກວດກາຄວາມຄືບຫນ້າ</h3>
+          <p>ຕິດຕາມກວດກາຄວາມຄືບຫນ້າຂອງທ່ານແລະສະເຫຼີມສະຫຼອງຜົນສໍາເລັດຂອງທ່ານ.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>ກ່ຽວກັບພວກເຮົາ</h2>
+      <p>ພວກເຮົາອຸທິດຕົນເພື່ອຊ່ວຍເຫຼືອຄົນທົ່ວໂລກໃນການຮຽນພາສາອັງກິດແບບມ່ວນໆ, ເຂົ້າເຖິງໄດ້ ແລະມີປະສິດທິພາບ. ເຂົ້າຮ່ວມຊຸມຊົນຂອງພວກເຮົາແລະເລີ່ມຕົ້ນການເດີນທາງຂອງທ່ານໃນມື້ນີ້!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>ຕິດຕໍ່ພວກເຮົາ</h2>
+      <form>
+        <input type="text" placeholder="ຊື່
+        " required>
+        <input type="email" placeholder="ອີເມວ" required>
+        <textarea placeholder="ຂໍ້ຄວາມ" required></textarea>
+        <button type="submit">ສົ່ງຂໍ້ຄວາມ</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 LaoBridge. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" class="disabled"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="disabled"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="disabled"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

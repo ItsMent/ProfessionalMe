@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MentGPT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/img/me (1).jpg" type="image/jpeg">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif; /* Added font family */
+      background-color: #f9f9f9; /* Added background color */
+      background-image: url("/PROJECTS/img/doodle\ bg.jpg"); /* Added background image */
+      background-size: cover; /* Ensure the image covers the entire background */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-attachment: fixed; /* Make the background image fixed */
+      background-position: center; /* Center the background image */
+    }
+    .chat-container {
+      
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      max-height: 300px;
+      min-height: 250px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background-color: white; /* Added background color */
+    }
+    .chat-header {
+      background-color: #dd8989;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold; /* Added font weight */
+      border-bottom: 1px solid #ccc; /* Added border */
+    }
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif; /* Added font family */
+      font-size: 14px; /* Added font size */
+    }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+      background-color: #f9f9f9; /* Added background color */
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 0;
+      font-family: Arial, sans-serif; /* Added font family */
+      font-size: 14px; /* Added font size */
+    }
+    .chat-input button {
+      padding: 10px;
+      background-color: #dd8989;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Added transition */
+    }
+    .chat-input button:hover {
+      background-color: #0056b3; /* Added hover effect */
+    }
+    .message-container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .message-container.user {
+      justify-content: flex-end;
+    }
+    .message-container.ai {
+      justify-content: flex-start;
+    }
+    .message-container img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+    .message {
+      padding: 5px 10px;
+      border-radius: 5px;
+      max-width: 70%;
+    }
+    .message.user {
+      background-color: #e1f5fe;
+    }
+    .message.ai {
+      background-color: #c8e6c9;
+    }
+    .contact {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .contact h2 {
+      color: #007bff;
+      font-weight: bold;
+    }
+    .contact h3 {
+      color: #333;
+    }
+    footer {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      border-top: 1px solid #ccc;
+    }
+    .profile-image {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      width: 200px; /* Increased width */
+      height: 200px; /* Increased height */
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: absolute; /* Change to absolute positioning */
+      top: 20px; /* Adjust the top position */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Center horizontally */
+    }
+  </style>
+</head>
+<body>
+  <!-- Your existing content -->
+
+  <img src="/img/me (1).jpg" alt="Profile Image" class="profile-image">
+
+  <div class="chat-container">
+    <div class="chat-header">Chat with AI Ment</div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      
+      <input type="text" id="user-input" placeholder="say sabaidee or hi to Ment">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    let isFirstMessage = true;
+
+    async function sendMessage() {
+      const userInput = document.getElementById('user-input').value;
+      if (userInput.trim() === '') return;
+
+      // Display user message
+      const chatMessages = document.getElementById('chat-messages');
+      const userMessageContainer = document.createElement('div');
+      userMessageContainer.classList.add('message-container', 'user');
+      const userMessage = document.createElement('div');
+      userMessage.classList.add('message', 'user');
+      userMessage.textContent = userInput;
+      const userProfileImage = document.createElement('img');
+      
+      userMessageContainer.appendChild(userMessage);
+      userMessageContainer.appendChild(userProfileImage);
+      chatMessages.appendChild(userMessageContainer);
+
+      // Clear input field
+      document.getElementById('user-input').value = '';
+
+      // Display "Say hi" text on first input
+      if (isFirstMessage) {
+        const sayHiMessageContainer = document.createElement('div');
+        sayHiMessageContainer.classList.add('message-container', 'ai');
+        const sayHiMessage = document.createElement('div');
+        sayHiMessage.classList.add('message', 'ai');
+        sayHiMessage.textContent = 'Ment: Hi there! How can I assist you today?';
+        const aiProfileImage = document.createElement('img');
+        aiProfileImage.src = '/img/me (1).jpg'; // Path to AI profile image
+        aiProfileImage.alt = 'AI Profile';
+        sayHiMessageContainer.appendChild(aiProfileImage);
+        sayHiMessageContainer.appendChild(sayHiMessage);
+        chatMessages.appendChild(sayHiMessageContainer);
+        isFirstMessage = false;
+      }
+
+      // Send message to Rasa server
+      try {
+        console.log('Sending message to Rasa:', userInput);
+        const response = await fetch('http://localhost:5005/webhooks/rest/webhook', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ sender: 'user', message: userInput })
+        });
+
+        if (!response.ok) {
+          console.error('Error:', response.statusText);
+          return;
+        }
+
+        const data = await response.json();
+        console.log('Response from Rasa:', data);
+
+        // Display AI response
+        data.forEach((message) => {
+          const aiMessageContainer = document.createElement('div');
+          aiMessageContainer.classList.add('message-container', 'ai');
+          const aiMessage = document.createElement('div');
+          aiMessage.classList.add('message', 'ai');
+          aiMessage.textContent = `Ment: ${message.text}`;
+          const aiProfileImage = document.createElement('img');
+          aiProfileImage.src = '/img/me (1).jpg'; // Path to AI profile image
+          aiProfileImage.alt = 'AI Profile';
+          aiMessageContainer.appendChild(aiProfileImage);
+          aiMessageContainer.appendChild(aiMessage);
+          chatMessages.appendChild(aiMessageContainer);
+        });
+
+        // Scroll to the bottom of the chat
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+  </script>
+</body>
+</html>

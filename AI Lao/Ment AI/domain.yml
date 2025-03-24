@@ -1,0 +1,148 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - askname
+  
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hello! How’s it going?"
+  - text: "Hi there! How are you today?"
+  - text: "Hey! What's up?"
+  - text: "Hello! How’s your day going?"
+  - text: "Hey! How are you doing?"
+  - text: "Hi! What’s new with you?"
+  - text: "Hey, what's good?"
+  - text: "Howdy! How’s everything?"
+  - text: "Hey! How’s life treating you?"
+  - text: "Yo! How are you feeling?"
+  - text: "Hi there! How’s your day been so far?"
+  - text: "Hey! How’s everything going?"
+  - text: "Hello! How's it going today?"
+  - text: "Hey, how’s it going? What's up?"
+  - text: "Hi! How’s everything on your end?"
+  - text: "Hey! How’s your week been so far?"
+  - text: "Hello! Anything exciting happening today?"
+  - text: "Hi there! How’s your mood today?"
+  - text: "Hey! How’s the world treating you?"
+  - text: "Hello! How’s your morning/afternoon/evening going?"
+  - text: "Hi! What’s the latest with you?"
+  - text: "Hey! How’s your day shaping up?"
+  - text: "Hello! How’s everything in your world?"
+  - text: "Hi! How’s your energy today?"
+  - text: "ສະບາຍດີ! ສະບາຍດີບໍ?" 
+  - text: "ສະບາຍດີ! ມື້ນີ້ເຮັດຫຍັງຢູ່?"
+  - text: "ສະບາຍດີ! ມື້ນີ້ເປັນແນວໃດ?" 
+  - text: "ສະບາຍດີ! ຊີວິດເຮັດແນວໃດ?" 
+  - text: "ສະບາຍດີ! ມື້ນີ້ດີບໍ?" 
+  - text: "ສະບາຍດີ! ມີຫຍັງໃໝ່ບໍ?" 
+  - text: "ສະບາຍດີ! ມື້ນີ້ມີຄວາມສຸກບໍ?" 
+  - text: "ສະບາຍດີ! ມື້ນີ້ເຮັດວຽກຫຍັງຢູ່?" 
+  - text: "ສະບາຍດີ! ມື້ນີ້ຮູ້ສຶກແນວໃດ?" 
+  - text: "ສະບາຍດີ! ມື້ນີ້ມີຫຍັງດີບໍ?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: "Was that helpful?"
+  - text: "Did that answer your question?"
+  - text: "I hope that was useful! Does that solve your problem?"
+  - text: "Let me know if that helped!"
+  - text: "Does that make sense? Let me know if you need more assistance."
+  - text: "I hope that was helpful! Is there anything else you need?"
+  - text: "Was that what you were looking for?"
+  - text: "Did that help clarify things for you?"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: "Awesome! Keep going!"
+  - text: "Fantastic! You're doing great!"
+  - text: "Nice job! Keep up the good work!"
+  - text: "Well done! Keep at it!"
+  - text: "Great work! Let me know if you need anything else."
+  - text: "Perfect! Keep it up, you're on the right track."
+  - text: "You're on fire! Keep going!"
+  - text: "That’s the spirit! Let’s keep moving forward!"
+  - text: "You’re doing amazing! Keep it up!"
+
+  utter_goodbye:
+  - text: "Bye!"
+  - text: "Goodbye! Take care!"
+  - text: "See you later!"
+  - text: "Have a great day!"
+  - text: "It was nice talking to you! Goodbye!"
+  - text: "Take care and see you soon!"
+  - text: "Farewell! I’ll be here if you need me."
+  - text: "Until next time! Goodbye!"
+  - text: "Goodbye! Feel free to reach out anytime!"
+  - text: "Bye! Have a great day!"
+  - text: "Goodbye! Let me know if you need anything else."
+  - text: "See you later! Take care!"
+  - text: "Goodbye! I’m here if you need me."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa. My name is Ment, and I'm here to assist you!"
+  - text: "I’m a chatbot created with Rasa. My purpose is to assist with a variety of tasks. My name is Ment, and I’m happy to help. What can I do for you today?"
+  - text: "Hi there! I'm Ment, an assistant bot. Need help with something? I can answer questions, share resources, or just chat."
+  - text: "I’m a virtual assistant built with Rasa. My name is Ment, and I can help you with [tasks]. How can I assist you today?"
+  - text: "I’m here to help you! You can ask me about [list of topics], or just ask me a random question if you feel like chatting. My name is Ment—let's get started!"
+  - text: "Hey, I’m Ment, your friendly bot powered by Rasa. How can I make your day easier? Whether it’s a quick question or a task, I’m ready!"
+  - text: "Hello, I’m Ment! I’m built with Rasa to help you out. Feel free to ask me anything, or let me know what tasks you need help with."
+  - text: "Hi, I’m Ment, your virtual assistant! Whether you're looking for information or just some company, I'm here to assist you."
+  - text: "Hello! I’m Ment, a chatbot designed to help you with a variety of tasks. My goal is to make your day a little easier. How can I assist you today?"
+
+  utter_askname:
+  - text: "My name is Inthilath Kittanouvong but you can call me Ment. What's your name?"
+  - text: "I'm Ment, a chatbot designed to assist you. What's your name?"
+  - text: "I'm Ment, a virtual assistant here to help you. What should I call you?"
+  - text: "I'm Ment, a bot created to assist you. What's your name?"
+  - text: "I'm Ment, a chatbot designed to help you. What's your name?"
+  - text: "I'm Ment, a virtual assistant here to help you. What's your name?"
+
+  utter_thanks:
+  - text: "You're welcome!"
+  - text: "No problem!"
+  - text: "Anytime!"
+  - text: "Glad I could help!"
+  - text: "You got it!"
+  - text: "Of course!"
+  - text: "Happy to help!"
+  - text: "My pleasure!"
+  - text: "Don't mention it!"
+  - text: "You're welcome! Let me know if you need anything else."
+  - text: "No problem! Feel free to ask if you have any other questions."
+  - text: "Anytime! I'm here to help."
+  - text: "Glad I could help! Let me know if you need assistance with anything else."
+  - text: "You got it! I'm here to assist you."
+
+  utter_help:
+  - text: "I can help you with a variety of tasks, such as answering questions, providing information, or just chatting. What do you need help with?"
+  - text: "I'm here to assist you with a variety of tasks. What can I help you with today?"
+  - text: "I can help you with a variety of tasks, such as answering questions, providing information, or just chatting. What do you need help with?"
+  - text: "I'm here to assist you with a variety of tasks. What can I help you with today?"
+  - text: "I can help you with a variety of tasks, such as answering questions, providing information, or just chatting. What do you need help with?"
+  - text: "I'm here to assist you with a variety of tasks. What can I help you with today?"
+  - text: "I can help you with a variety of tasks, such as answering questions, providing information, or just chatting. What do you need help with?"
+  - text: "I'm here to assist you with a variety of tasks. What can I help you with today?"
+  - text: "I can help you with a variety of tasks, such as answering questions, providing information, or just chatting. What do you need help with?"
+  - text: "I'm here to assist you with a variety of tasks. What can I help you with today?"
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,368 @@
+version: "3.1"
+
+
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+    - hey there
+    - hey buddy
+    - hey man
+    - hey dude
+    - hi friend
+    - what's up
+    - wassup
+    - yo
+    - howdy
+    - greetings
+    - nice to meet you
+    - pleasure to meet you
+    - hey hey
+    - heya
+    - hai
+    - hola
+    - hallo
+    - salut
+    - bonjour
+    - sawasdee
+    - namaste
+    - konnichiwa
+    - annyeong
+    - aloha
+    - sup
+    - morning
+    - evening
+    - afternoon
+    - top of the morning to you
+    - how’s it going?
+    - how are you?
+    - how have you been?
+    - long time no see
+    - sabaidee
+    - sabaidee bor?
+    - sabaidee mai?
+    - sabaidee der
+    - sabaidee jao
+    - sabaidee na
+    - sabaidee souksan
+    - hello my friend
+    - yo what's up
+    - hey what's good
+    - how are things?
+    - how’s everything?
+    - hi there, how’s your day?
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yup
+    - yep
+    - y
+    - sure
+    - of course
+    - absolutely
+    - definitely
+    - indeed
+    - that's right
+    - correct
+    - that's correct
+    - right
+    - sounds good
+    - that sounds good
+    - exactly
+    - you got it
+    - affirmative
+    - sure thing
+    - uh-huh
+    - mhm
+    - for sure
+    - naturally
+    - obviously
+    - no doubt
+    - undoubtedly
+    - 100%
+    - certainly
+    - agreed
+    - I agree
+    - I'm on board
+    - makes sense
+    - true that
+    - true
+    - fact
+    - roger that
+    - aye aye
+    - totally
+    - absolutely right
+    - absolutely correct
+    - absolutely true
+    - absolutely sure
+    - absolutely yes
+    - absolutely agreed
+    - absolutely I agree
+    - absolutely makes sense
+    - absolutely fact
+    - absolutely roger that
+    - absolutely aye aye
+
+- intent: goodbye
+  examples: |
+    - jer kun 
+    - bye
+    - goodbye
+    - bye bye
+    - good by
+    - goodnight
+    - good night
+    - have a nice day
+    - have a great day
+    - have a good one
+    - see you
+    - see ya
+    - see you later
+    - see you soon
+    - see you around
+    - catch you later
+    - take care
+    - take it easy
+    - talk to you later
+    - peace out
+    - farewell
+    - adios
+    - ciao
+    - sayonara
+    - au revoir
+    - later
+    - later bro
+    - later dude
+    - later gator
+    - till next time
+    - until we meet again
+    - gotta go
+    - I’m out
+    - I'm off
+    - cee you later
+    - cu
+    - cya
+    - cheers
+    - so long
+    - be safe
+    - take care of yourself
+
+
+- intent: deny
+  examples: |
+    - br
+    - br dai
+    - br man
+    - no
+    - nope
+    - nah
+    - n
+    - never
+    - no way
+    - not really
+    - I don't think so
+    - I don't agree
+    - I disagree
+    - absolutely not
+    - definitely not
+    - not at all
+    - that's not right
+    - that's incorrect
+    - I don't like that
+    - don't like that
+    - no chance
+    - not happening
+    - out of the question
+    - not interested
+    - I'd rather not
+    - doesn't sound good
+    - I'm not sure
+    - I'm afraid not
+    - unlikely
+    - not this time
+    - I don't want to
+    - nope, sorry
+    - nah, I'm good
+    - count me out
+    - negative
+    - no thanks
+    - I'll pass
+    - no can do
+    - ain't gonna happen
+    - hard pass
+    - not my thing
+    - not for me
+    - not my style
+
+- intent: mood_great
+  examples: |
+    - khoi dee jai laiy
+    - khoi dee jai
+    - dee jai
+    - khoi dee jai mak
+    - khoi happy laiy
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - fantastic
+    - awesome
+    - incredible
+    - excellent
+    - superb
+    - magnificent
+    - I'm feeling amazing
+    - I'm feeling awesome
+    - I'm feeling fantastic
+    - I'm feeling wonderful
+    - I'm feeling on top of the world
+    - I'm doing great
+    - I'm doing fantastic
+    - I'm doing awesome
+    - I'm doing excellent
+    - I'm super happy
+    - I'm in a great mood
+    - feeling like a king
+    - feeling unstoppable
+    - feeling fantastic today
+    - feeling amazing right now
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am fantastic
+    - I am so happy
+    - I am going to save the world
+    - I couldn't be better
+    - life is good
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - absolutely thrilled
+    - over the moon
+    - couldn't ask for a better day
+    - pure happiness
+    - everything is awesome
+    - couldn't be happier
+    - best day ever
+    - just fantastic
+    - completely satisfied
+
+
+- intent: mood_unhappy
+  examples: |
+    - khoi sia jai dh ni
+    - khoi sia jai
+    - khoi sia jai mak
+    - khoi sia jai laiy
+    - khoi br happy
+    - my day was horrible
+    - my day was awful
+    - my day was terrible
+    - I am sad
+    - I'm feeling down
+    - I'm feeling blue
+    - I don't feel very well
+    - I'm not feeling good
+    - I feel awful
+    - I feel terrible
+    - I feel miserable
+    - I feel upset
+    - I feel so bad
+    - I am disappointed
+    - I am heartbroken
+    - I'm so sad
+    - super sad
+    - sad
+    - very sad
+    - extremely sad
+    - so sad
+    - not good
+    - not very good
+    - not feeling great
+    - feeling down in the dumps
+    - feeling low
+    - feeling miserable
+    - I'm in a bad mood
+    - I'm feeling terrible
+    - I'm having a rough day
+    - I can't stop feeling bad
+    - things aren't going well
+    - feeling hopeless
+    - I'm bummed out
+    - I'm really upset
+    - feeling empty
+    - feeling frustrated
+    - I'm disappointed with everything
+    - I'm not okay
+    - nothing feels right
+    - I'm just not in a good place
+    - I'm feeling down
+    - I'm really sad today
+    - I'm really frustrated
+
+
+- intent: bot_challenge
+  examples: |
+    - jao man khon br
+    - jao man y
+    - jao man phai
+    - jao man e y
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you real?
+    - are you just a machine?
+    - are you an AI?
+    - is this an automated response?
+    - is this a robot?
+    - are you programmed to talk to me?
+    - who is on the other side?
+    - am I chatting with a robot?
+    - is this an automated message?
+    - are you human or machine?
+    - are you a chatbot?
+    - are you an artificial intelligence?
+    - is there a person behind this?
+    - are you powered by AI?
+    - how do I know you're not a bot?
+    - is there someone real behind the screen?
+    - are you real or just a program?
+    - are you just an algorithm?
+    - can a bot really talk like this?
+    - is this a real conversation?
+    - am I chatting with a computer?
+    - are you an algorithm pretending to be human?
+    - are you artificial intelligence or a human?
+    - can you think for yourself?
+    - are you a machine or a person?
+    - are you capable of real thought?
+    - is this conversation with a computer?
+
+
+- intent: askname
+  examples: |
+    - what's your name?
+    - what is your name
+    - what's your name
+    - what is your name?
+    - what do I call you?
+    - what should I call you?
+    - what are you called?
+    - what's your name again?
+    - what's your name, again?
+    - what's your name, by the way?
+    - what's your name, btw?
+    - what's your name, please
+

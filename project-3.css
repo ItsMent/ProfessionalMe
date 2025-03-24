@@ -1,0 +1,106 @@
+/* Basic styles for the project detail section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-detail {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.project-detail p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.project-detail ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project-detail ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.product-list, .product-details, .shopping-cart, .checkout {
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-list .products, .shopping-cart .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-list .products .product-item, .shopping-cart .cart-items .cart-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+}
+
+.product-details .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form input, .checkout-form button {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
