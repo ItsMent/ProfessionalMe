@@ -13,10 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       src: '../lao-cultural-app/images/Laos Culture.jpg',
       description: 'Laos Culture'
     },
-    {
-      src: '../images/Laos Diversity (1).webp',
-      description: 'Laos Diversity'
-    },
+   
     {
       src: './images/Laos Diversity (1).webp',
       description: 'Laos Diversity'
