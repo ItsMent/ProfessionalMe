@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MentGPT</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="img\me (1).jpg" type="image/jpeg">
+  <link rel="icon" href="me (1).jpg" type="image/jpeg">
   <style>
     body {
       margin: 0;
@@ -144,7 +144,7 @@
 <body>
   <!-- Your existing content -->
 
-  <img src="/img/me (1).jpg" alt="Profile Image" class="profile-image">
+  <img src="me (1).jpg" alt="Profile Image" class="profile-image">
 
   <div class="chat-container">
     <div class="chat-header">Chat with AI Ment</div>
@@ -187,7 +187,7 @@
         sayHiMessage.classList.add('message', 'ai');
         sayHiMessage.textContent = 'Ment: Hi there! How can I assist you today?';
         const aiProfileImage = document.createElement('img');
-        aiProfileImage.src = './img/me (1).jpg'; // Path to AI profile image
+        aiProfileImage.src = 'me (1).jpg'; // Path to AI profile image
         aiProfileImage.alt = 'AI Profile';
         sayHiMessageContainer.appendChild(aiProfileImage);
         sayHiMessageContainer.appendChild(sayHiMessage);
@@ -222,7 +222,7 @@
           aiMessage.classList.add('message', 'ai');
           aiMessage.textContent = `Ment: ${message.text}`;
           const aiProfileImage = document.createElement('img');
-          aiProfileImage.src = './img/me (1).jpg'; // Path to AI profile image
+          aiProfileImage.src = 'me (1).jpg'; // Path to AI profile image
           aiProfileImage.alt = 'AI Profile';
           aiMessageContainer.appendChild(aiProfileImage);
           aiMessageContainer.appendChild(aiMessage);
