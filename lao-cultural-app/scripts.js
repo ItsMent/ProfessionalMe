@@ -16,12 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
    
     {
       src: './images/Laos Diversity (1).webp',
-      description: 'Laos Diversity'
+      description: 'Laos Diversity.'
     },
-    {
-      src: 'images/Laos Diversity (1).webp',
-      description: 'Laos Diversity'
-    },
+  
     {
       src: 'images/Laos Diversity.jpg',
       description: 'Laos Diversity'
