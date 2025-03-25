@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const illustrations = [
     {
-      src: 'images/Laos Boun-Pee-Mhai.webp',
+      src: './images/Laos Boun-Pee-Mhai.webp',
       description: 'Laos Boun-Pee-Mhai'
     },
     {
-      src: 'images/Laos Culture.jpg',
+      src: '../lao-cultural-app/images/Laos Culture.jpg',
       description: 'Laos Culture'
     },
     {
-      src: 'images/Laos Diversity (1).webp',
+      src: '/lao-cultural-app/images/Laos Diversity.jpg',
       description: 'Laos Diversity'
     },
     {
