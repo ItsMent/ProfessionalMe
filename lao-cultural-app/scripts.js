@@ -10,14 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Laos Boun-Pee-Mhai'
     },
     {
+      src: './images/Laos Diversity (1).webp',
+      description: 'Laos Diversity.'
+    },
+    {
       src: '../lao-cultural-app/images/Laos Culture.jpg',
       description: 'Laos Culture'
     },
    
-    {
-      src: './images/Laos Diversity (1).webp',
-      description: 'Laos Diversity.'
-    },
+    
   
     {
       src: 'images/Laos Diversity.jpg',
